@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-09-14T22:21:12.150435+08:00",
+  "load_generator": {
+    "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "logical_cpus": 24,
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "memory_kb": "MemTotal:       16223928 kB"
+  },
+  "deployment": {
+    "environment": "WSL2 local; load generator and all services share one host, not a remote server",
+    "application": "Java 8u504, Spring Boot 2.7.4, one process on 18081; java -jar target/hmdp-1.0-SNAPSHOT.jar",
+    "jvm_flags": "InitialHeapSize=260046848 MaxHeapSize=4154458112 UseParallelGC (Java ergonomic defaults)",
+    "jmeter": "5.6.3, Java 8u504, HEAP=-Xms512m -Xmx1g",
+    "nginx": "1.18.0 portable Ubuntu binary; 2 workers, worker_connections=2048, upstream keepalive=64; port 18080",
+    "mysql": "8.0.28 portable binary; existing dev data directory on WSL filesystem; port 13306",
+    "redis": "6.2.16 portable binary, AOF enabled, appendfsync everysec, port 16379",
+    "rabbitmq": "3.9.13 portable binary, durable classic queues and persistent messages, port 15672",
+    "application_pools": "Hikari default max=10; Redis pool max-active=10; RabbitMQ consumers=2 prefetch=10; Tomcat default max threads=200",
+    "features": "USER rate limit enabled 5/10s; close task enabled, payment timeout 900s; confirm timeout 3000ms; recovery age 300000ms",
+    "network": "JMeter -> loopback Nginx -> loopback application; no WAN latency"
+  },
+  "mysql": [
+    "8.0.28-0ubuntu4",
+    "134217728",
+    "1",
+    "1",
+    "151"
+  ],
+  "redis_persistence": {
+    "aof_enabled": "1",
+    "aof_last_write_status": "ok"
+  }
+}

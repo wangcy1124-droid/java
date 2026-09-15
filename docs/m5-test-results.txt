@@ -1,0 +1,30 @@
+M5 verification — 2026-09-14 Asia/Shanghai
+
+Build: mvn -q -DskipTests package
+Test: mvn -q -Dtest=RateLimitIT test
+-------------------------------------------------------------------------------
+Test set: com.hmdp.RateLimitIT
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.218 s - in com.hmdp.RateLimitIT
+
+PASS ipQuotaIgnoresUntrustedForwardedHeaders
+PASS redisFailureReturns503AndNeverInvokesBusiness
+PASS seckillAnnotationBlocksBeforeBusinessAndSharesQuotaAcrossVoucherIds
+PASS trustedProxySeparatesIpBuckets
+PASS windowRecoversWithoutRejectedRequestsExtendingTtl
+PASS apiQuotaSharedAcrossUsersAnd429HasRetryAfter
+PASS concurrentLuaCallsNeverExceedThreshold
+PASS userQuotaIsolatedAndTokenRotationDoesNotBypassIt
+PASS partialWindowExpiresOldEntriesButKeepsRecentRequests
+PASS trustedProxyUsesRealIpAndRightmostUntrustedForwardedHop
+
+Packaged app: started 17:07:33, port 18081, in 4.84 seconds.
+Command: python3 scripts/verify-m5.py — exit 0
+PASS 同用户第 6 次秒杀 HTTP 429，Retry-After=10；拒绝请求不预扣库存
+PASS 另一用户独立限额，RabbitMQ 落库及双端库存正确
+PASS 窗口结束后恢复进入业务（券已售罄，返回业务库存不足而非 429）
+EVIDENCE voucherId=156 orders=637418106444054657,637418106444054658 MySQL stock=0 Redis stock=0
+
+Frontend: node --check frontend/js/common.js — exit 0
+PASS Node VM response interceptor 429/503 preserves API error message
+No browser E2E or JMeter performance claim.

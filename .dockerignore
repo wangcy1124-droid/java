@@ -1,0 +1,6 @@
+**
+!target/
+target/**
+!target/hmdp-1.0-SNAPSHOT.jar
+!deploy/
+!deploy/Dockerfile

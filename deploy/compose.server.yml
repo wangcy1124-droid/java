@@ -1,0 +1,35 @@
+# From repository root: docker compose -f docker-compose.yml -f deploy/compose.server.yml up -d --build
+services:
+  app:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    environment:
+      TZ: Asia/Shanghai
+      JAVA_TOOL_OPTIONS: ${APP_JAVA_OPTIONS:--Xms512m -Xmx512m -XX:+UseG1GC}
+      MYSQL_URL: jdbc:mysql://mysql:3306/hmdp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD}
+      REDIS_HOST: redis
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: ${RABBITMQ_USER:-hmdp}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:?Set RABBITMQ_PASSWORD}
+      RABBITMQ_CONCURRENCY: ${RABBITMQ_CONCURRENCY:-2}
+      RABBITMQ_PREFETCH: ${RABBITMQ_PREFETCH:-10}
+      MYSQL_POOL_MAX_SIZE: ${MYSQL_POOL_MAX_SIZE:-10}
+      UPLOAD_DIR: /app/uploads
+      RATE_LIMIT_ENABLED: "true"
+    volumes:
+      - ./data/imgs:/app/uploads
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    restart: unless-stopped
+  nginx:
+    environment:
+      NGINX_UPSTREAM: app:8081
+    depends_on:
+      - app

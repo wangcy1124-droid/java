@@ -1,0 +1,15 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /path/to/hmdp/jmeter/seckill-500.jmx
+Starting standalone test @ September 14, 2026 10:21:14 PM CST (1789395674736)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +  24495 in 00:00:15 = 1649.5/s Avg:   193 Min:    10 Max:   528 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+summary +  73321 in 00:00:30 = 2446.2/s Avg:   203 Min:    65 Max:   518 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+summary =  97816 in 00:00:45 = 2182.2/s Avg:   201 Min:    10 Max:   528 Err:     0 (0.00%)
+summary +   2184 in 00:00:01 = 3193.0/s Avg:   158 Min:    77 Max:   251 Err:     0 (0.00%) Active: 0 Started: 500 Finished: 500
+summary = 100000 in 00:00:46 = 2197.4/s Avg:   200 Min:    10 Max:   528 Err:     0 (0.00%)
+Tidying up ...    @ September 14, 2026 10:22:00 PM CST (1789395720687)
+... end of run

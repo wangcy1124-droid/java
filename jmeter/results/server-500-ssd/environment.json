@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-09-15T09:57:17.070154+08:00",
+  "load_generator": {
+    "os": "Linux-5.4.0-177-generic-x86_64-with-glibc2.29",
+    "logical_cpus": 80,
+    "cpu": "Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz",
+    "memory_kb": "MemTotal:       263744908 kB"
+  },
+  "deployment": {
+    "verified_server_environment": true,
+    "environment": "Remote Ubuntu 20.04.6 server; project /path/to/hmdp-m7; JMeter and services on same server",
+    "server_hardware": "80 logical CPUs, 257563 MiB total memory; shared server, not exclusive allocation",
+    "resource_limits": "Java/MySQL/Redis/RabbitMQ/Nginx affinity CPUs 0-7; JMeter runner affinity CPUs8-11 (not reserved); Java ActiveProcessorCount8; RabbitMQ schedulers4, memory watermark1GB",
+    "application": "Java8u504 / Spring Boot2.7.4, one process, loopback28081",
+    "jvm_flags": "-XX:ActiveProcessorCount=8 -Xms512m -Xmx512m -XX:+UseG1GC -Xloggc:runtime/app-gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps",
+    "jmeter": "5.6.3 / Java8u504, HEAP=-Xms512m -Xmx1g, same physical server, CPUs8-11",
+    "nginx": "1.18.0 user-space binary; 2workers, worker_connections2048, upstream keepalive64; loopback28080",
+    "mysql": "8.0.28; SSD runtime/mysql; buffer pool512MiB; innodb_flush_log_at_trx_commit=1, sync_binlog=1",
+    "redis": "6.2.16 user-space binary, AOF enabled, appendfsync everysec, loopback26379",
+    "rabbitmq": "3.9.13 user-space binary, durable classic queues/persistent messages, loopback25672",
+    "application_pools": "Hikari max10; Redis pool max-active10; RabbitMQ consumers2 prefetch10; Tomcat max200",
+    "features": "USER limit enabled5/10s; close task enabled; payment timeout900s; confirm timeout3000ms; recovery age300000ms",
+    "network": "JMeter -> server loopback Nginx -> server loopback application; no WAN latency in measured samples; SSH used only for orchestration",
+    "storage": "Project runtime resolves to /var/tmp/hmdp-test-runtime/runtime on /dev/sdb3, Intel SSD; original /home HDD runtime retained as backup"
+  },
+  "mysql": [
+    "8.0.28-0ubuntu4",
+    "536870912",
+    "1",
+    "1",
+    "151"
+  ],
+  "redis_persistence": {
+    "aof_enabled": "1",
+    "aof_last_write_status": "ok"
+  }
+}

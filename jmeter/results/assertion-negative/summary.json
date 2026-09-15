@@ -1,0 +1,16 @@
+{
+  "purpose": "Negative assertion verification, not a performance run",
+  "samples": 6,
+  "expected_failures": 6,
+  "http_200_business_rejections": 5,
+  "http_429": 1,
+  "passed": true,
+  "failure_messages": [
+    "Purchase rejected: HTTP 200 库存不足",
+    "Purchase rejected: HTTP 200 库存不足",
+    "Purchase rejected: HTTP 200 库存不足",
+    "Purchase rejected: HTTP 200 库存不足",
+    "Purchase rejected: HTTP 200 库存不足",
+    "Purchase rejected: HTTP 429 请求过于频繁"
+  ]
+}

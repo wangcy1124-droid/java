@@ -1,0 +1,451 @@
+{
+  "before": {
+    "seckill.order.queue": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 2
+    },
+    "seckill.order.dlq": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 2
+    },
+    "seckill.order.parking": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 0
+    }
+  },
+  "history": [
+    {
+      "seconds": 0.002,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 2.012,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 4.022,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 6.034,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 8.046,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 10.054,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 12.065,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 539,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      }
+    },
+    {
+      "seconds": 14.144,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 539,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 370
+    },
+    {
+      "seconds": 16.203,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 539,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 499
+    },
+    {
+      "seconds": 18.265,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 1127,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 592
+    },
+    {
+      "seconds": 20.328,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 1127,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 688
+    },
+    {
+      "seconds": 22.4,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 827,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 803
+    },
+    {
+      "seconds": 24.464,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 827,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 899
+    },
+    {
+      "seconds": 26.53,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 827,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 994
+    },
+    {
+      "seconds": 28.594,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 581,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 1088
+    },
+    {
+      "seconds": 30.657,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 581,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 1148
+    },
+    {
+      "seconds": 32.726,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 352,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 1288
+    },
+    {
+      "seconds": 34.788,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 352,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 1402
+    },
+    {
+      "seconds": 36.853,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 352,
+          "messages_unacknowledged": 20,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 1405
+    },
+    {
+      "seconds": 38.918,
+      "queues": {
+        "seckill.order.queue": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.dlq": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 2
+        },
+        "seckill.order.parking": {
+          "messages_ready": 0,
+          "messages_unacknowledged": 0,
+          "consumers": 0
+        }
+      },
+      "orders": 1405
+    }
+  ],
+  "after": {
+    "seckill.order.queue": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 2
+    },
+    "seckill.order.dlq": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 2
+    },
+    "seckill.order.parking": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 0
+    }
+  }
+}

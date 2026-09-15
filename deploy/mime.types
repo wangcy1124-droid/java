@@ -1,0 +1,17 @@
+# Types used by the course frontend; system/container Nginx may use its full mime.types.
+types {
+    text/html html htm;
+    text/css css;
+    application/javascript js;
+    application/json json;
+    image/jpeg jpg jpeg;
+    image/png png;
+    image/gif gif;
+    image/webp webp;
+    image/svg+xml svg;
+    image/x-icon ico;
+    font/woff woff;
+    font/woff2 woff2;
+    font/ttf ttf;
+    font/otf otf;
+}

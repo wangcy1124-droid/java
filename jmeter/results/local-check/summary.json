@@ -1,0 +1,56 @@
+{
+  "overall": {
+    "samples": 200,
+    "seconds": 1.277,
+    "tps": 156.617,
+    "success_tps": 156.617,
+    "errors": 0,
+    "error_pct": 0.0,
+    "p95_ms": 33,
+    "p99_ms": 85,
+    "max_ms": 179,
+    "mean_ms": 23.365,
+    "max_threads": 10,
+    "min_threads": 1
+  },
+  "steady": {
+    "samples": 120,
+    "seconds": 4,
+    "tps": 30.0,
+    "success_tps": 30.0,
+    "errors": 0,
+    "error_pct": 0.0,
+    "p95_ms": 25,
+    "p99_ms": 29,
+    "max_ms": 33,
+    "mean_ms": 19.917,
+    "max_threads": 10,
+    "min_threads": 1
+  },
+  "steady_definition": "Starts after ramp; requests fully contained in configured window; includes every business/HTTP failure",
+  "dataset_exhausted": true,
+  "checks": {
+    "accepted_orders_exactly_persisted": true,
+    "all_pending": true,
+    "unique_users": true,
+    "inventory_consistent": true,
+    "qualification_consistent": true,
+    "queues_drained": true,
+    "parking_unchanged": true,
+    "delivery_created_only": true
+  },
+  "accepted": 200,
+  "orders": 200,
+  "redis_stock": 0,
+  "mysql_stock": 0,
+  "qualifications": 200,
+  "owners": 200,
+  "delivery_states": "CREATED\t200",
+  "drain_seconds_after_jmeter": 0.035,
+  "http_codes": {
+    "200": 200
+  },
+  "failure_examples": [],
+  "local_numeric_target_met": false,
+  "server_target_verified": false
+}

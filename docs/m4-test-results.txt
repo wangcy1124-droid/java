@@ -1,0 +1,26 @@
+M4 verification — 2026-09-14 Asia/Shanghai
+
+Build: mvn -q -DskipTests package — exit 0
+Test command: mvn -q -Dtest=ShopCacheIT test
+-------------------------------------------------------------------------------
+Test set: com.hmdp.ShopCacheIT
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.439 s - in com.hmdp.ShopCacheIT
+
+PASS updateCannotBeOverwrittenByInFlightOldRebuild
+PASS concurrentColdMissOnlyLoadsDatabaseOnce
+PASS l1ExpiresAndIsCapacityBounded
+PASS failedRedisDeleteStillInvalidatesL1AndDatabaseCommitSurvives
+PASS expiredHotReturnsOldWithoutWaitingAndRebuildsOnce
+PASS nullUsesShortRedisTtlAndAvoidsRepeatedDatabaseReads
+PASS hotDatabaseFailureKeepsOldValueAndAllowsNextRebuild
+PASS coldThenL1ThenRedisAndDefensiveCopy
+PASS updateInvalidatesOnlyAfterCommitAndRollbackKeepsCache
+
+Packaged application started at 16:52:26, port 18081, in 4.48 seconds.
+Command: python3 scripts/verify-m4.py — exit 0
+PASS 商户详情冷加载/重复查询、更新后 L1/L2 失效、空值短 TTL
+PASS 默认热点商户逻辑过期封装及物理 TTL，普通商户保持兼容 JSON
+EVIDENCE shopId=43 normalTTL=1980 updatedName=M4-http-1789375955848670-updated hotspot=1
+
+No JMeter/performance result claimed.

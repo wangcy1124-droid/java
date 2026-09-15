@@ -1,0 +1,25 @@
+/target/
+/.idea/
+*.iml
+*.log
+.env
+.env.*
+!.env.example
+/data/
+/runtime/
+/.tools/
+/.m2/
+__pycache__/
+*.pyc
+/jmeter/data/
+/jmeter/results/*/raw.jtl
+/jmeter/results/*/report/
+
+# Local course reference; not required to build or run.
+/黑马点评.pdf
+
+# Original per-request records stay in local/server archives.
+/jmeter/results/*/raw.jtl.gz
+
+# Local agent instructions include workstation-specific reference paths.
+/AGENTS.md

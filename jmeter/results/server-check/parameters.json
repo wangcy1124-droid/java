@@ -1,0 +1,42 @@
+{
+  "threads": 10,
+  "ramp": 1,
+  "duration": 10,
+  "target_rps": 900,
+  "steady_margin": 1,
+  "manifest": {
+    "tag": "m7_ff034108ad52489a",
+    "voucher_id": 10,
+    "stock": 2000,
+    "rows": 2000,
+    "created_at": "2026-09-14T22:40:31.444204+08:00",
+    "base_url": "http://127.0.0.1:28080/api",
+    "session_ttl_seconds": 7200
+  },
+  "command": [
+    ".tools/apache-jmeter-5.6.3/bin/jmeter",
+    "-n",
+    "-t",
+    "/path/to/hmdp-m7/jmeter/seckill-500.jmx",
+    "-l",
+    "/path/to/hmdp-m7/jmeter/results/server-check/raw.jtl",
+    "-j",
+    "/path/to/hmdp-m7/jmeter/results/server-check/jmeter.log",
+    "-Jthreads=10",
+    "-Jramp=1",
+    "-Jduration=10",
+    "-Jtarget_rpm=54000",
+    "-Jhost=127.0.0.1",
+    "-Jport=28080",
+    "-Jprotocol=http",
+    "-Jprefix=/api",
+    "-Jdata=/path/to/hmdp-m7/jmeter/data/server-check/users.csv",
+    "-Jassertion=/path/to/hmdp-m7/jmeter/assert-order.groovy",
+    "-Jsample_variables=userId,voucherId,orderId",
+    "-Jjmeter.save.saveservice.output_format=csv",
+    "-Jjmeter.save.saveservice.assertion_results_failure_message=true",
+    "-Jjmeter.save.saveservice.timestamp_format=ms",
+    "-Jjmeter.save.saveservice.thread_counts=true",
+    "-Jhttpclient4.retrycount=0"
+  ]
+}

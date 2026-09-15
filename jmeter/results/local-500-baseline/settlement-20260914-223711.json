@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-09-14T22:37:11.216458+08:00",
+  "voucher_id": 158,
+  "accepted": 100000,
+  "orders": 95921,
+  "order_status_counts": {
+    "1": 95921
+  },
+  "cancelled_before_creation": 1075,
+  "unaccounted": 3004,
+  "mysql_stock": 4079,
+  "redis_stock": 1075,
+  "qualifications": 98925,
+  "owners": 98925,
+  "pending_releases": 0,
+  "queues": {
+    "seckill.order.queue": {
+      "messages_ready": 3444,
+      "messages_unacknowledged": 0,
+      "consumers": 0
+    },
+    "seckill.order.dlq": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 0
+    },
+    "seckill.order.parking": {
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "consumers": 0
+    }
+  },
+  "checks": {
+    "queues_drained": false,
+    "every_acceptance_accounted": false,
+    "no_unrequested_deliveries": true,
+    "active_inventory_consistent": false,
+    "active_qualifications_consistent": false,
+    "no_pending_stock_release": true
+  }
+}

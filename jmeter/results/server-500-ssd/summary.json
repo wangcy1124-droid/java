@@ -1,0 +1,56 @@
+{
+  "overall": {
+    "samples": 59425,
+    "seconds": 60.351,
+    "tps": 984.656,
+    "success_tps": 984.656,
+    "errors": 0,
+    "error_pct": 0.0,
+    "p95_ms": 17,
+    "p99_ms": 50,
+    "max_ms": 240,
+    "mean_ms": 5.17,
+    "max_threads": 500,
+    "min_threads": 1
+  },
+  "steady": {
+    "samples": 45981,
+    "seconds": 46,
+    "tps": 999.587,
+    "success_tps": 999.587,
+    "errors": 0,
+    "error_pct": 0.0,
+    "p95_ms": 18,
+    "p99_ms": 44,
+    "max_ms": 139,
+    "mean_ms": 5.083,
+    "max_threads": 500,
+    "min_threads": 500
+  },
+  "steady_definition": "Requests fully contained in [first sample + ramp + margin, first sample + duration - margin]; includes business/HTTP failures; default margin 2s excludes scheduling edges",
+  "dataset_exhausted": false,
+  "checks": {
+    "accepted_orders_exactly_persisted": true,
+    "all_pending": true,
+    "unique_users": true,
+    "inventory_consistent": true,
+    "qualification_consistent": true,
+    "queues_drained": true,
+    "parking_unchanged": true,
+    "delivery_created_only": true
+  },
+  "accepted": 59425,
+  "orders": 59425,
+  "redis_stock": 40575,
+  "mysql_stock": 40575,
+  "qualifications": 59425,
+  "owners": 59425,
+  "delivery_states": "CREATED\t59425",
+  "drain_seconds_after_jmeter": 73.313,
+  "http_codes": {
+    "200": 59425
+  },
+  "failure_examples": [],
+  "numeric_target_met": true,
+  "server_target_verified": true
+}
