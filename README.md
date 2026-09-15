@@ -68,7 +68,7 @@ mvn -q -DskipTests package
 java -jar target/hmdp-1.0-SNAPSHOT.jar
 ```
 
-默认后端 `http://localhost:8081`、前端 `http://localhost:8080`、RabbitMQ 管理页 `http://localhost:15672`。Nginx 将 `/api/` 转发到宿主机 8081；改后端端口时同步调整 Nginx 模板上游环境变量。完整容器部署见 [deploy/README.md](deploy/README.md)。上传图片通过 `data/imgs` 挂载访问。
+默认后端 `http://localhost:8081`、前端 `http://localhost:8080`、RabbitMQ 管理页 `http://localhost:15672`。Nginx 将 `/api/` 转发到宿主机 8081；改后端端口时同步调整 Nginx 模板上游环境变量。上传图片通过 `data/imgs` 挂载访问。
 
 本次没有 Docker，真实验证使用便携 MySQL/Redis/RabbitMQ；Compose 尚未实际运行。
 
@@ -266,7 +266,7 @@ M6 专项验证（先停止应用，完成 03 迁移）：
 mvn -q -Dtest=SocialInteractionIT test
 ```
 
-12 项全部通过；默认应用启动后运行 `python3 scripts/verify-m6.py`，验证真实社交 HTTP 链路。详见 [M6 记录](docs/m6-verification.md) 和 [测试摘要](docs/m6-test-results.txt)。
+12 项全部通过；默认应用启动后运行 `python3 scripts/verify-m6.py`，验证真实社交 HTTP 链路。
 
 
 M5 专项验证（先停止应用，使用专用开发基础设施）：
@@ -275,7 +275,7 @@ M5 专项验证（先停止应用，使用专用开发基础设施）：
 mvn -q -Dtest=RateLimitIT test
 ```
 
-10 项全部通过，覆盖三维度、可信代理、窗口恢复、100 次并发仅放行 20 次、Redis 异常及秒杀 AOP。默认配置应用启动后执行 `python3 scripts/verify-m5.py`，可复现真实下单、第 6 次 429、另一用户正常下单和窗口恢复。详见 [M5 记录](docs/m5-verification.md)。
+10 项全部通过，覆盖三维度、可信代理、窗口恢复、100 次并发仅放行 20 次、Redis 异常及秒杀 AOP。默认配置应用启动后执行 `python3 scripts/verify-m5.py`，可复现真实下单、第 6 次 429、另一用户正常下单和窗口恢复。
 
 
 M4 专项验证连接专用开发 MySQL/Redis/RabbitMQ，先停止应用：
@@ -284,7 +284,7 @@ M4 专项验证连接专用开发 MySQL/Redis/RabbitMQ，先停止应用：
 mvn -q -Dtest=ShopCacheIT test
 ```
 
-9 项缓存测试全部通过，包括 L1/L2/DB 路径、空值 TTL、有界容量、40 次并发冷加载/热点重建、更新提交/回滚、旧值回填竞争和失败处理。详见 [M4 验证记录](docs/m4-verification.md)。启动默认配置应用后可运行 `python3 scripts/verify-m4.py` 验证商户 HTTP 查询及更新；脚本会新增一个商户夹具。
+9 项缓存测试全部通过，包括 L1/L2/DB 路径、空值 TTL、有界容量、40 次并发冷加载/热点重建、更新提交/回滚、旧值回填竞争和失败处理。启动默认配置应用后可运行 `python3 scripts/verify-m4.py` 验证商户 HTTP 查询及更新；脚本会新增一个商户夹具。
 
 
 M2 专项测试使用真实 MySQL、Redis、RabbitMQ；会新增夹具数据，并临时解绑/删除测试 Exchange。**仅在专用开发库和 vhost、且没有其他应用消费者时执行**，先停止本机 Java 应用：
@@ -293,7 +293,7 @@ M2 专项测试使用真实 MySQL、Redis、RabbitMQ；会新增夹具数据，�
 mvn -q -Dtest=OrderLifecycleIT,OrderMessagingIT test
 ```
 
-M3 的 8 项生命周期测试与 M2 的 13 项组合回归全部通过，详见 [M3 记录](docs/m3-verification.md) 和 [测试摘要](docs/m3-test-results.txt)。M2 的 13 项测试涵盖发布 return/nack、模拟确认丢失、事务与 ACK、有限重试/DLQ、坏消息隔离、数据库唯一约束回滚、补偿重试和并发边界。实际报告见 [m2-test-results.txt](docs/m2-test-results.txt)。
+M3 的 8 项生命周期测试与 M2 的 13 项组合回归全部通过，M2 的 13 项测试涵盖发布 return/nack、模拟确认丢失、事务与 ACK、有限重试/DLQ、坏消息隔离、数据库唯一约束回滚、补偿重试和并发边界。
 
 打包后的实际定时任务验证：在专用开发环境以 `ORDER_PAYMENT_TIMEOUT_SECONDS=10 ORDER_CLOSE_DELAY_MS=1000 java -jar target/hmdp-1.0-SNAPSHOT.jar` 启动，再运行 `python3 scripts/verify-m3.py`。验证后重启应用，恢复默认 15 分钟支付有效期。
 
@@ -310,7 +310,7 @@ Python 脚本另支持 `BASE_URL`、`MYSQL_HOST`、`MYSQL_PORT`、`MYSQL_DATABAS
 
 ## M7 部署与真实性能结果
 
-[部署入口](deploy/README.md)、[JMeter执行说明](jmeter/README.md)、[服务器实际记录](docs/m7-verification.md)、[简历证据](docs/resume-evidence.md)。服务器以独立用户态方式运行 MySQL、Redis、RabbitMQ、Java 和 Nginx；另有 Compose 模板，但未实际运行镜像。
+[部署入口](deploy/README.md)、[JMeter执行说明](jmeter/README.md)。服务器以独立用户态方式运行 MySQL、Redis、RabbitMQ、Java 和 Nginx；另有 Compose 模板，但未实际运行镜像。
 
 服务器 JMeter：500线程，10秒爬升，总时长60秒，到达速率设置900请求/秒；实际59,425次请求，无数据耗尽。全程受理984.656 TPS、P95 17ms、错误0%；去除爬升及调度边缘后的46秒窗口，实际线程始终500，受理999.587 TPS、P95 18ms、错误0%。达到本场入口目标（≥800TPS、P95≤300ms、错误<0.1%）。
 
