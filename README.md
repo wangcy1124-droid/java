@@ -1,8 +1,7 @@
 # 黑马点评二次开发
 
-基于黑马点评开源/课程项目二次开发，M0 → M7 已完成实现与阶段验证。已在真实服务器部署并执行 JMeter：**500线程、46秒稳态窗口，入口受理999.587 TPS、P95 18ms、错误率0%**，59,425笔订单最终全部落库并完成库存核对。负载与服务同机，施压计划60秒；这是入口突发负载成绩，不是长期持续落库吞吐量。详见 [M7记录](docs/m7-verification.md)。
+基于黑马点评开源/课程项目二次开发，M0 → M7 已完成实现与阶段验证。已在真实服务器部署并执行 JMeter：**500线程、46秒稳态窗口，入口受理999.587 TPS、P95 18ms、错误率0%**，59,425笔订单最终全部落库并完成库存核对。负载与服务同机，施压计划60秒；这是入口突发负载成绩，不是长期持续落库吞吐量。
 
-来源及版本选择见 [baseline-source.md](docs/baseline-source.md)，阶段记录：[M0](docs/m0-verification.md)、[M1](docs/m1-verification.md)、[M2](docs/m2-verification.md)、[M3](docs/m3-verification.md)、[M4](docs/m4-verification.md)、[M5](docs/m5-verification.md)、[M6](docs/m6-verification.md)、[M7](docs/m7-verification.md)。历史阶段的实现说明以对应日期为准，当前链路以下文为准。
 
 ## 技术与业务
 
